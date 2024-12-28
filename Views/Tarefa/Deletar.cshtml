@@ -1,0 +1,49 @@
+@model trilha_net_desafio_mvc.Models.Tarefa
+@{
+    ViewData["Title"] = "Deletar uma tarefa";
+}
+
+<h1>Deletar Contato</h1>
+<h2 class="text-danger">Tem certeza que deseja excluir este registro permanetemente?</h2>
+
+<div class="container">
+
+
+    <div class="row">
+        <div class="col-md-6 mb-3">
+            <div class="form-group">
+                <label asp-for="Titulo" class="control-label"></label>
+                <input asp-for="Titulo" class="form-control" />
+            </div>
+        </div>
+        <div class="col-md-6 mb-3">
+            <div class="form-group">
+                <label asp-for="Descricao" class="control-label"></label>
+                <input asp-for="Descricao" class="form-control" />
+            </div>
+        </div>
+        <div class="col-md-6 mb-3">
+            <div class="form-group">
+                <label asp-for="Data" class="control-label"></label>
+                <input asp-for="Data" class="form-control" />
+            </div>
+        </div>
+
+        <div class="col-md-6 mb-3">
+            <div class="form-group">
+                <label asp-for="Status" class="control-label"></label> <br>
+                <input type="checkbox" asp-for="Status" class="form-check-input" />
+            </div>
+        </div>
+
+
+        <form asp-action="Deletar">
+            <input type="hidden" asp-for="Id" />
+            <input type="submit" value="Deletar" class="btn btn-danger" />
+        </form>
+    </div>
+
+    <br>
+    <a asp-action="Index">Voltar para a listagem</a>
+
+</div>

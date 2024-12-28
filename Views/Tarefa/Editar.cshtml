@@ -1,0 +1,47 @@
+@model trilha_net_desafio_mvc.Models.Tarefa
+@{
+    ViewData["Title"] = "Editar uma tarefa";
+}
+
+<h1>Editar Contato</h1>
+
+<div class="container">
+
+    <form asp-action="Editar">
+        <div class="row">
+            <div class="col-md-6 mb-3">
+                <div class="form-group">
+                    <label asp-for="Titulo" class="control-label"></label>
+                    <input asp-for="Titulo" class="form-control" />
+                </div>
+            </div>
+            <div class="col-md-6 mb-3">
+                <div class="form-group">
+                    <label asp-for="Descricao" class="control-label"></label>
+                    <input asp-for="Descricao" class="form-control" />
+                </div>
+            </div>
+            <div class="col-md-6 mb-3">
+                <div class="form-group">
+                    <label asp-for="Data" class="control-label"></label>
+                    <input asp-for="Data" class="form-control" />
+                </div>
+            </div>
+
+            <div class="col-md-6 mb-3">
+                <div class="form-group">
+                    <label asp-for="Status" class="control-label"></label> <br>
+                    <input type="checkbox" asp-for="Status" class="form-check-input"  />
+                </div>
+            </div>
+        
+
+            <div class="col-md-12">
+                <input type="submit" value="Salvar" class="btn btn-primary" />
+            </div>
+        </div>
+    </form>
+    <br>
+    <a asp-action="Index">Voltar para a listagem</a>
+
+</div>

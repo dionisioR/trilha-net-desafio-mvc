@@ -1,0 +1,42 @@
+@model trilha_net_desafio_mvc.Models.Tarefa
+@{
+    ViewBag.Title = "Detalhes da Tarefa";
+}
+
+<h1>Detalhes da Tarefa</h1>
+
+<div class="container">
+    <dl class="row">
+         <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Titulo)
+        </dt>
+        <dt class="col-sm-10">
+            @Html.DisplayFor(model => model.Titulo)
+        </dt>
+         <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Descricao)
+        </dt>
+        <dt class="col-sm-10">
+            @Html.DisplayFor(model => model.Descricao)
+        </dt>
+         <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Data)
+        </dt>
+        <dt class="col-sm-10">
+            @Html.DisplayFor(model => model.Data)
+        </dt>
+         <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Status)
+        </dt>
+        <dt class="col-sm-10">
+            @Html.DisplayFor(model => model.Status)
+        </dt>
+    </dl>
+
+     <br>
+    
+    <a asp-action="Editar" asp-route-id="@Model.Id" class="btn btn-warning">Editar</a>
+    <br>
+    <a asp-action="Index">Voltar para a listagem</a>
+
+</div>
